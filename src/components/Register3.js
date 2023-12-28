@@ -1,19 +1,12 @@
 import React, { Component } from 'react'
 import { Form, Field} from "formik"
- export default class Register3 extends Component {
-//    constructor(errors)
-//    {
-//     super(errors)
-//     console.log(errors)
-//    }
-    render() {
-        // console.log(errors.errors)
-    return (
+function Register3(props) {
+     return (
       <div>Register User
              <Form>
                 <label> Name </label>
                 <Field name="name"/>
-                <span style={{color:'red'}}> {errors} </span>
+<span style={{color:'red'}}> {props.errors.name} </span>
                 <br/>
                 
                 <label> Address </label>
@@ -58,4 +51,4 @@ import { Form, Field} from "formik"
       </div>
     )
   }
-}
+export default Register3;
